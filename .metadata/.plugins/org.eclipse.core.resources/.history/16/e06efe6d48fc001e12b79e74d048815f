@@ -1,0 +1,11 @@
+package com.coderhouase;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.coderhouase.modelo.Cancion;
+
+public interface CancionRepository extends JpaRepository<Cancion, Integer> {
+	List<Cancion> findByIntepreteId(Integer interpreteId);
+}

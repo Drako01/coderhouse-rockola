@@ -1,0 +1,20 @@
+package com.coderhouase.servicio;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.coderhouase.modelo.Interprete;
+import com.coderhouase.repositorio.InterpreteRepository;
+
+@Service
+public class InterpreteService {
+	
+	@Autowired
+	private InterpreteRepository interpreteRepository;
+	
+	public Integer obtenerIdSegunNombre(String nombre) {
+		Interprete interprete = interpreteRepository.findByNombre(nombre);
+		return interprete != null ? interprete.getId() : null;
+	}
+
+}

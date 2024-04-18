@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;interptrete&apos; to &apos;interprete&apos;" description="Rename resource &apos;interptrete&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/interptrete" name="interprete" stamp="1713469178241" updateReferences="true"/>
+</session>

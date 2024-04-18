@@ -1,0 +1,20 @@
+package com.coderhouase.servicio;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.coderhouase.modelo.Cancion;
+import com.coderhouase.repositorio.CancionRepository;
+
+@Service
+public class CancionService {
+
+	@Autowired
+	private CancionRepository cancionRepository;
+
+	public List<Cancion> obtenerCancionesPorIdDeInterprete(Integer interpreteId) {
+		return cancionRepository.findByIntepreteId(interpreteId);
+	}
+}

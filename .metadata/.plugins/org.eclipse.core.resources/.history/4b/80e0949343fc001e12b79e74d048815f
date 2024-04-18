@@ -1,0 +1,7 @@
+package com.coderhouase.repositorio;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface InterpreteRepository extends JpaRepository<T, ID> {
+
+}

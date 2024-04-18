@@ -1,0 +1,25 @@
+package com.coderhouse.controlador;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.coderhouse.servicio.InterpreteService;
+
+@RestController
+@RequestMapping("/interprete")
+public class InterpreteController {
+
+	
+	@Autowired
+	private InterpreteService interpreteService;
+	
+	@GetMapping(value = "/{nombre}", produces = { MediaType.APPLICATION_JSON_VALUE })
+	public Integer getInterpreteByNombre(@PathVariable("nombre") String nombre) {
+		return interpreteService.obtenerIdSegunNombre(nombre);
+	}
+	
+}
