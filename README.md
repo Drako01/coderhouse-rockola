@@ -129,6 +129,41 @@ Este microservicio actúa como un orquestador para obtener las canciones de un i
 Esta solicitud orquestará las llamadas a los microservicios de Intérprete y Canciones para obtener las canciones del intérprete deseado.
 
 
+## Script para crear la Base de Datos.
+
+```
+    CREATE DATABASE IF NOT EXISTS rockola;
+    USE rockola;
+```
+
+#### Ejemplo para inyectar en las Tablas Creadas:
+
+```
+    INSERT INTO interprete (nombre) VALUES
+    ('Interprete1'),
+    ('Interprete2'),
+    ('Interprete3');
+    
+    INSERT INTO cancion (titulo, interprete_id) VALUES
+    ('Cancion1_Int1', 1),  
+    ('Cancion2_Int1', 1),  
+    ('Cancion3_Int1', 1),  
+    ('Cancion4_Int1', 1),  
+    ('Cancion5_Int1', 1),  
+    ('Cancion6_Int1', 1),  
+    ('Cancion1_Int2', 2),  
+    ('Cancion2_Int2', 2), 
+    ('Cancion3_Int2', 2),  
+    ('Cancion4_Int2', 2),  
+    ('Cancion1_Int3', 3),  
+    ('Cancion2_Int3', 3), 
+    ('Cancion3_Int3', 3), 
+    ('Cancion4_Int3', 3), 
+    ('Cancion5_Int3', 3),
+    ('Cancion6_Int3', 3),
+    ('Cancion7_Int3', 3);
+
+```
 ---
 
 
