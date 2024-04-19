@@ -19,7 +19,7 @@ Este microservicio proporciona operaciones CRUD (Crear, Leer, Actualizar, Elimin
 
 ### Crear un nuevo intérprete
 - Método: POST
-- Endpoint: `/interprete`
+- Endpoint: `http://localhost:8081/interprete`
 - Parámetros: Nombre del intérprete en el cuerpo de la solicitud
 - Ejemplo de solicitud:
   ```json
@@ -72,7 +72,7 @@ Este microservicio proporciona operaciones CRUD para la entidad de Canciones. Al
 
 ### Crear una nueva canción asociada a un intérprete
 - Método: POST
-- Endpoint: `/canciones`
+- Endpoint: `http://localhost:8082/canciones`
 - Parámetros: Título de la canción y ID del intérprete en el cuerpo de la solicitud
 - Ejemplo de solicitud:
   ```json
@@ -122,7 +122,7 @@ Este microservicio actúa como un orquestador para obtener las canciones de un i
 
 ### Obtener las canciones de un intérprete por su nombre
 - Método: GET
-- Endpoint: `/rockola/canciones/{nombreInterprete}`
+- Endpoint: `http://localhost:8080/rockola/canciones/{nombreInterprete}`
 - Parámetros: Nombre del intérprete en la URL
 - Ejemplo de solicitud: `/rockola/canciones/Nombre del Intérprete`
 
